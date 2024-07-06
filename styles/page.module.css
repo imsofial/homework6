@@ -20,9 +20,9 @@
   line-height: 73px;
   text-decoration-line: underline;
 
-.a {
+  .a {
     color: inherit;
-}
+  }
 }
 
 .bg-img {

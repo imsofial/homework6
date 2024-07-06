@@ -1,11 +1,10 @@
 /* components/MainContent.module.css */
 .meNote {
-    color: rgb(239, 239, 239);
-    font-size: 120px;
-    font-weight: 400;
-    text-decoration: underline;
-    text-align: right;
-    margin-top: 315px;
-    margin-bottom: 0;
-  }
-  
+  color: rgb(239, 239, 239);
+  font-size: 120px;
+  font-weight: 400;
+  text-decoration: underline;
+  text-align: right;
+  margin-top: 315px;
+  margin-bottom: 0;
+}

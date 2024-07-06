@@ -1,13 +1,15 @@
-import React from 'react';
-import { ComicData } from './types';
-import { formatDistanceToNow } from 'date-fns';
+import React from "react";
+import { ComicData } from "./types";
+import { formatDistanceToNow } from "date-fns";
 
 interface ComicDisplayProps {
   comicData: ComicData;
 }
 
 const ComicDisplay: React.FC<ComicDisplayProps> = ({ comicData }) => {
-  const comicDate = new Date(`${comicData.year}-${comicData.month}-${comicData.day}`);
+  const comicDate = new Date(
+    `${comicData.year}-${comicData.month}-${comicData.day}`,
+  );
 
   return (
     <div className="comic-container">

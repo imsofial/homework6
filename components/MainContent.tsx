@@ -1,6 +1,6 @@
 // components/MainContent.tsx
-import React from 'react';
-import styles from '../styles/MainContent.module.css';
+import React from "react";
+import styles from "../styles/MainContent.module.css";
 
 const MainContent: React.FC = () => {
   return (

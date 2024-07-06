@@ -1,66 +1,64 @@
+.header {
+  padding: 0 93px;
+}
 
-  .header {
-    padding: 0 93px;
-  }
-  
-  .header__list {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .header__item {
-    color: rgb(239, 239, 239);
-    font-size: 60px;
-    font-weight: 400;
-    line-height: 73px;
-    text-decoration-line: underline;
-  }
-  
-  .header__item a {
-    color: inherit;
-  }
-  
-  .me {
-    background-color: rgba(239, 239, 239, 0.2);
-    margin: 5%;
-  }
-  
-  .me__note {
-    color: rgb(239, 239, 239);
-    font-size: 90px;
-    font-weight: 400;
-    text-align: left;
-    margin-top: 0px;
-    line-height: 110px;
-    margin-bottom: 0px;
-    margin-left: 2%;
-    letter-spacing: 0px;
-    /* text-decoration: underline; */
-  }
-  
-  .me__img {
-    float: right;
-    padding: 5%;
-    margin: 5%;
-    max-height: 600px;
-    max-width: auto;
-  }
-  
-  .text {
-    color: rgb(239, 239, 239);
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 40px;
-    letter-spacing: 0px;
-    text-align: left;
-    margin: 5%;
-  }
-  
-  .he {
-    border: 3px solid rgb(239, 239, 239);
-    width: 500px;
-    margin: 0px;
-    float: left;
-  }
-  
+.header__list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__item {
+  color: rgb(239, 239, 239);
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 73px;
+  text-decoration-line: underline;
+}
+
+.header__item a {
+  color: inherit;
+}
+
+.me {
+  background-color: rgba(239, 239, 239, 0.2);
+  margin: 5%;
+}
+
+.me__note {
+  color: rgb(239, 239, 239);
+  font-size: 90px;
+  font-weight: 400;
+  text-align: left;
+  margin-top: 0px;
+  line-height: 110px;
+  margin-bottom: 0px;
+  margin-left: 2%;
+  letter-spacing: 0px;
+  /* text-decoration: underline; */
+}
+
+.me__img {
+  float: right;
+  padding: 5%;
+  margin: 5%;
+  max-height: 600px;
+  max-width: auto;
+}
+
+.text {
+  color: rgb(239, 239, 239);
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin: 5%;
+}
+
+.he {
+  border: 3px solid rgb(239, 239, 239);
+  width: 500px;
+  margin: 0px;
+  float: left;
+}

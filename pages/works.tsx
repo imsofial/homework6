@@ -1,10 +1,10 @@
 // src/pages/works.tsx
 
-import React from 'react';
-import Header from '../components/Header';
-import Works from '../components/Works';
-import ComicFetcher from '../components/ComicFetcher';
-import Footer from '../components/Footer';
+import React from "react";
+import Header from "../components/Header";
+import Works from "../components/Works";
+import ComicFetcher from "../components/ComicFetcher";
+import Footer from "../components/Footer";
 
 const WorksPage: React.FC = () => (
   <>
@@ -13,7 +13,7 @@ const WorksPage: React.FC = () => (
       <Works />
       <ComicFetcher />
     </main>
-    <Footer/>
+    <Footer />
   </>
 );
 
