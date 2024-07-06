@@ -1,14 +1,24 @@
-import withPWA from "next-pwa";
+/** @type {import('next').NextConfig} */
 
-const isProd = process.env.NODE_ENV === "production";
+const isGithubActions = process.env.GITHUB_ACTIONS || false;
 
-const config = {
-  basePath: "/homework5",
-  assetPrefix: isProd ? "/homework5/" : "",
+let assetPrefix = '';
+let basePath = '';
+
+if (isGithubActions) {
+  const repo = process.env.my-app.replace(/.*?\//, '');
+  assetPrefix = `/${repo}/`;
+  basePath = `/${repo}`;
+}
+
+const nextConfig = {
+  reactStrictMode: true,
+  assetPrefix: assetPrefix,
+  basePath: basePath,
   trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
 };
 
-export default withPWA({
-  dest: "public",
-  ...config,
-});
+export default nextConfig;
