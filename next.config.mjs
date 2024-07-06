@@ -6,12 +6,9 @@ const config = {
   basePath: "/homework5",
   assetPrefix: isProd ? "/homework5/" : "",
   trailingSlash: true,
-  // other configurations
 };
 
 export default withPWA({
-  pwa: {
-    dest: "public",
-  },
+  dest: "public",
   ...config,
 });
