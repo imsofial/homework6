@@ -1,9 +1,10 @@
 import React from "react";
 import styles from "../styles/AboutMe.module.css";
+import Image from "next/image";
 
 const AboutMe: React.FC = () => (
   <section className={styles.me}>
-    <img
+    <Image
       src="/img/photo_2024-06-08_17-06-14.jpg"
       alt="Sofia Goryunova"
       className={styles.me__img}

@@ -1,24 +1,23 @@
-/** @type {import('next').NextConfig} */
+import runtimeCaching from 'next-pwa/cache.js';
+import withPWA from 'next-pwa';
 
-const isGithubActions = process.env.GITHUB_ACTIONS || false;
-
-let assetPrefix = '';
-let basePath = '';
-
-if (isGithubActions) {
-  const repo = process.env.my-app.replace(/.*?\//, '');
-  assetPrefix = `/${repo}/`;
-  basePath = `/${repo}`;
-}
+const pwaConfig = {
+  dest: 'public',
+  register: true,
+  skipWaiting: true,
+  runtimeCaching,
+  buildExcludes: [/middleware-manifest.json$/],
+};
 
 const nextConfig = {
-  reactStrictMode: true,
-  assetPrefix: assetPrefix,
-  basePath: basePath,
+  // other Next.js configurations
+  basePath: '/homework5',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/homework5/' : '',
   trailingSlash: true,
+  output: 'export', 
   images: {
     unoptimized: true,
   },
 };
 
-export default nextConfig;
+export default withPWA(pwaConfig)(nextConfig);

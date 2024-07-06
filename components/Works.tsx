@@ -2,6 +2,7 @@
 
 import React from "react";
 import styles from "../styles/Works.module.css";
+import Image from "next/image";
 
 const Works: React.FC = () => {
   return (
@@ -12,7 +13,7 @@ const Works: React.FC = () => {
         <li>
           <figure className={styles.works__pictures}>
             <figcaption className={styles.caption}>study projects</figcaption>
-            <img src="/img/фрейм 1.png" alt="study projects" height="300px" />
+            <Image src="/img/фрейм 1.png" alt="study projects" height={300} />
           </figure>
         </li>
         <li>
@@ -20,7 +21,7 @@ const Works: React.FC = () => {
             <figcaption className={styles.caption}>
               2D game on python
             </figcaption>
-            <img src="/img/2dgame.png" alt="2D game on python" height="300px" />
+            <Image src="/img/2dgame.png" alt="2D game on python" height={300} />
           </figure>
         </li>
         <li>
@@ -28,10 +29,10 @@ const Works: React.FC = () => {
             <figcaption className={styles.caption}>
               console calculator on pyhton
             </figcaption>
-            <img
+            <Image
               src="/img/calc.png"
               alt="console calculator on pyhton"
-              height="300px"
+              height={300}
             />
           </figure>
         </li>
