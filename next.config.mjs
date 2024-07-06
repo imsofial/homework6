@@ -1,8 +1,8 @@
-import runtimeCaching from 'next-pwa/cache.js';
-import withPWA from 'next-pwa';
+import runtimeCaching from "next-pwa/cache.js";
+import withPWA from "next-pwa";
 
 const pwaConfig = {
-  dest: 'public',
+  dest: "public",
   register: true,
   skipWaiting: true,
   runtimeCaching,
@@ -11,10 +11,10 @@ const pwaConfig = {
 
 const nextConfig = {
   // other Next.js configurations
-  basePath: '/homework5',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/homework5/' : '',
+  basePath: "/homework5",
+  assetPrefix: process.env.NODE_ENV === "production" ? "/homework5/" : "",
   trailingSlash: true,
-  output: 'export', 
+  output: "export",
   images: {
     unoptimized: true,
   },
