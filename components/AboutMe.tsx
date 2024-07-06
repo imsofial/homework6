@@ -7,7 +7,7 @@ const AboutMe: React.FC = () => (
     <h1 className={styles.me__note}>About me</h1>
     <hr className={styles.he} />
     <p className={styles.text}>
-      My name is Sofia Goryunova. I'm 19 y.o. I study at Innopolis University from 2023 year.
+      My name is Sofia Goryunova. I am 19 y.o. I study at Innopolis University from 2023 year.
       I became interested in programming in 3rd grade when started attending a programming club.
       The first programming language that I was lucky enough to learn was QBasic.
       Then at 9 grade I decided to become a professional programmer and started to prepare for exams.
