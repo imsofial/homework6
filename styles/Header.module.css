@@ -1,0 +1,22 @@
+/* components/Header.module.css */
+.header {
+    padding: 0 93px;
+  }
+  
+.headerList {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+  
+.headerItem {
+color: rgb(239, 239, 239);
+font-size: 60px;
+font-weight: 400;
+line-height: 73px;
+text-decoration-line: underline;
+}
+
+.headerItem a {
+color: inherit;
+}

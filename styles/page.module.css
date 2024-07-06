@@ -1,0 +1,45 @@
+.body {
+  background: rgb(129, 146, 46);
+  position: relative;
+}
+
+.header {
+  padding: 0 93px;
+}
+
+.header__list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__item {
+  color: rgb(239, 239, 239);
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 73px;
+  text-decoration-line: underline;
+
+.a {
+    color: inherit;
+}
+}
+
+.bg-img {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 52%;
+  z-index: -1;
+}
+
+.me__note {
+  color: rgb(239, 239, 239);
+  font-size: 120px;
+  font-weight: 400;
+  text-decoration: underline;
+  text-align: right;
+  margin-top: 315px;
+  margin-bottom: 0;
+}
