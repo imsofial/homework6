@@ -8,8 +8,8 @@ const withPWA = require('next-pwa')({
 });
 
 module.exports = withPWA({
-  basePath: '/your-repo-name',
-  assetPrefix: isProd ? '/your-repo-name/' : '',
+  basePath: '/homework5',
+  assetPrefix: isProd ? '/homework5/' : '',
   trailingSlash: true,
 });
 
