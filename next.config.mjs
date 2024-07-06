@@ -1,17 +1,13 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+import withPWA from 'next-pwa';
 
 const isProd = process.env.NODE_ENV === 'production';
 
-const withPWA = require('next-pwa')({
-  dest: 'public',
-});
-
-module.exports = withPWA({
-  basePath: '/homework5',
-  assetPrefix: isProd ? '/homework5/' : '',
+export default withPWA({
+  pwa: {
+    dest: 'public',
+  },
+  basePath: '/your-repo-name',
+  assetPrefix: isProd ? '/your-repo-name/' : '',
   trailingSlash: true,
+  // other configurations
 });
-
-
-export default nextConfig;
