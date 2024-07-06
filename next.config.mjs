@@ -6,8 +6,8 @@ export default withPWA({
   pwa: {
     dest: 'public',
   },
-  basePath: '/your-repo-name',
-  assetPrefix: isProd ? '/your-repo-name/' : '',
+  basePath: '/homework5',
+  assetPrefix: isProd ? '/homework5/' : '',
   trailingSlash: true,
   // other configurations
 });
