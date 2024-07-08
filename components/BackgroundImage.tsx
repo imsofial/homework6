@@ -6,7 +6,7 @@ import Image from "next/image";
 const BackgroundImage: React.FC = () => {
   return (
     <div className={styles.bgImg}>
-      <Image src="/img/me.png" alt="Background" />
+      <Image src="/img/me.png" alt="Background" width="52"/>
     </div>
   );
 };
