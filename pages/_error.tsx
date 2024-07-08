@@ -1,22 +1,14 @@
-// _error.tsx
+// pages/error.tsx
+'use client';
 
-import { NextPageContext } from 'next';
+import React from 'react';
 
 interface ErrorProps {
-    statusCode: number;
-  }
+  error: Error;
+}
 
-  const Error = ({ statusCode }: ErrorProps) => {
-    return (
-      <div>
-        <h1>Error {statusCode}</h1>
-        <p>Something went wrong!</p>
-      </div>
-    );
-  };
+const ErrorComponent: React.FC<ErrorProps> = ({ error }) => {
+  return <div>An error occurred: {error.message}</div>;
+};
 
-Error.getInitialProps = ({ res, err }: NextPageContext): ErrorProps => {
-    const statusCode = res?.statusCode ?? err?.statusCode ?? 404;
-    return { statusCode };
-  };
-export default Error;
+export default ErrorComponent;
