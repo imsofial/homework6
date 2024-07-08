@@ -11,7 +11,7 @@ const pwaConfig = {
 
 const nextConfig = {
   // other Next.js configurations
-  basePath: '/homework5',
+  basePath: '/pages',
   assetPrefix: process.env.NODE_ENV === 'production' ? '/homework5/' : '',
   trailingSlash: true,
   output: 'export',  // Enables static exports
