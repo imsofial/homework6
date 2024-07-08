@@ -4,7 +4,6 @@ import ComicDisplay from "./ComicDisplay";
 
 const ComicFetcher: React.FC = () => {
   const [comicData, setComicData] = useState<ComicData | null>(null);
-  const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
   const fetchIdentifier = async (email: string): Promise<string> => {
@@ -31,7 +30,6 @@ const ComicFetcher: React.FC = () => {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setLoading(true);
-    setError(null);
 
     const email = event.currentTarget.email.value;
 
@@ -40,11 +38,7 @@ const ComicFetcher: React.FC = () => {
       const comicData = await fetchComic(id);
       setComicData(comicData);
     } catch (error) {
-      if (error instanceof Error) {
-        setError(error.message);
-      } else {
-        setError("An unknown error occurred");
-      }
+      throw new Error("Failed to identify ID")
     } finally {
       setLoading(false);
     }
@@ -63,7 +57,7 @@ const ComicFetcher: React.FC = () => {
         </button>
       </form>
       {loading && <p>Loading...</p>}
-      {error && <p id="err">{error}</p>}
+      {/* {error && <p id="err">{error}</p>} */}
       {comicData && <ComicDisplay comicData={comicData} />}
     </div>
   );
