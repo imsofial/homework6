@@ -28,8 +28,7 @@ const WorksPage: React.FC<Props> = ({ initialComicData }) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  // Replace with your logic to fetch initial comic data if needed
+export const getServerSideProps: GetServerSideProps = async () => {
   const initialComicData: ComicData | null = null;
 
   return {

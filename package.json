@@ -6,7 +6,8 @@
     "dev": "next -p 8080",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint": "eslint pages/**/*.{js,jsx,ts,tsx}",
+    "lint:write": "eslint --debug pages/ --fix",
     "format": "prettier --write ."
   },
   "homepage": "https://imsofial.github.io/homework5",
