@@ -2,9 +2,19 @@ import React from "react";
 import styles from "../styles/AboutMe.module.css";
 import Image from "next/image";
 
+type ImageLoaderParams = {
+  src: string;
+  width: number;
+  quality?: number;
+};
+
+const imageLoader = ({ src, width, quality }: ImageLoaderParams): string => {
+  return `https://example.com/${src}?w=${width}&q=${quality || 75}`;
+};
 const AboutMe: React.FC = () => (
   <section className={styles.me}>
     <Image
+      loader={imageLoader}
       src="/img/photo_2024-06-08_17-06-14.jpg"
       alt="Sofia Goryunova"
       className={styles.me__img}
