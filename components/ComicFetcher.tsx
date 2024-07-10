@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { ComicData } from "./types";
-import ComicDisplay from "./ComicDisplay";
 
-const ComicFetcher: React.FC = () => {
-  const [comicData, setComicData] = useState<ComicData | null>(null);
+interface ComicFetcherProps {
+  setComicData: React.Dispatch<React.SetStateAction<ComicData | null>>;
+}
+
+const ComicFetcher: React.FC<ComicFetcherProps> =  ({ setComicData }) => {
+  // const [comicData, setComicData] = useState<ComicData | null>(null);
   const [loading, setLoading] = useState(false);
 
   const fetchIdentifier = async (email: string): Promise<string> => {
@@ -58,7 +61,7 @@ const ComicFetcher: React.FC = () => {
       </form>
       {loading && <p>Loading...</p>}
       {/* {error && <p id="err">{error}</p>} */}
-      {comicData && <ComicDisplay comicData={comicData} />}
+      {/* {comicData && <ComicDisplay comicData={comicData} />} */}
     </div>
   );
 };

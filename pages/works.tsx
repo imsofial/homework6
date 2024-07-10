@@ -1,20 +1,40 @@
 // src/pages/works.tsx
 
-import React from "react";
-import Header from "../components/Header";
+import React, { useState } from "react";
+import { GetServerSideProps } from 'next';
+import { ComicData } from "../components/types";
+import ComicDisplay from "../components/ComicDisplay";
 import Works from "../components/Works";
 import ComicFetcher from "../components/ComicFetcher";
-import Footer from "../components/Footer";
+import Layout from "../components/Layout";
 
-const WorksPage: React.FC = () => (
+interface Props {
+  initialComicData: ComicData | null;
+}
+
+const WorksPage: React.FC<Props> = ({ initialComicData })  => {
+  const [comicData, setComicData] = useState<ComicData | null>(initialComicData);
+
+return(
   <>
-    <Header />
-    <main>
-      <Works />
-      <ComicFetcher />
-    </main>
-    <Footer />
+    <Layout>
+        <Works />
+        <ComicFetcher setComicData={setComicData}/>
+        {comicData && <ComicDisplay comicData={comicData} />}
+    </Layout>
+    
   </>
-);
+)};
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  // Replace with your logic to fetch initial comic data if needed
+  const initialComicData: ComicData | null = null;
+
+  return {
+    props: {
+      initialComicData,
+    },
+  };
+};
 
 export default WorksPage;

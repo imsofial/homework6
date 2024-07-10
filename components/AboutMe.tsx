@@ -15,9 +15,11 @@ const AboutMe: React.FC = () => (
   <section className={styles.me}>
     <Image
       loader={imageLoader}
-      src="/img/photo_2024-06-08_17-06-14.jpg"
+      src="/img/me2.jpg"
       alt="Sofia Goryunova"
       className={styles.me__img}
+      width={420}
+      height={500}
     />
     <h1 className={styles.me__note}>About me</h1>
     <hr className={styles.he} />
