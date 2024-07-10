@@ -3,7 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import { PropsWithChildren } from 'react';
 
-const Layout = ({ children }: PropsWithChildren<{}>) => {
+const Layout = ({ children }: PropsWithChildren<object>) => {
   return (
     <div className="body">
       <header>

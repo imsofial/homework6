@@ -3,7 +3,6 @@
 import React from 'react';
 import styles from '../styles/Works.module.css';
 import Image from 'next/image';
-import { isAbsolute } from 'path';
 
 const Works: React.FC = () => {
   return (
