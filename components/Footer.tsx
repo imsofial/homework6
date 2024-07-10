@@ -1,6 +1,6 @@
-import React from "react";
-import style from "../styles/Footer.module.css";
-import Link from "next/link";
+import React from 'react';
+import style from '../styles/Footer.module.css';
+import Link from 'next/link';
 
 const Footer: React.FC = () => (
   <footer className={style.footer}>

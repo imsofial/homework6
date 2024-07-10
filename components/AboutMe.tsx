@@ -1,6 +1,6 @@
-import React from "react";
-import styles from "../styles/AboutMe.module.css";
-import Image from "next/image";
+import React from 'react';
+import styles from '../styles/AboutMe.module.css';
+import Image from 'next/image';
 
 type ImageLoaderParams = {
   src: string;

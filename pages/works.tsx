@@ -1,30 +1,32 @@
 // src/pages/works.tsx
 
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import { GetServerSideProps } from 'next';
-import { ComicData } from "../components/types";
-import ComicDisplay from "../components/ComicDisplay";
-import Works from "../components/Works";
-import ComicFetcher from "../components/ComicFetcher";
-import Layout from "../components/Layout";
+import { ComicData } from '../components/types';
+import ComicDisplay from '../components/ComicDisplay';
+import Works from '../components/Works';
+import ComicFetcher from '../components/ComicFetcher';
+import Layout from '../components/Layout';
 
 interface Props {
   initialComicData: ComicData | null;
 }
 
-const WorksPage: React.FC<Props> = ({ initialComicData })  => {
-  const [comicData, setComicData] = useState<ComicData | null>(initialComicData);
+const WorksPage: React.FC<Props> = ({ initialComicData }) => {
+  const [comicData, setComicData] = useState<ComicData | null>(
+    initialComicData
+  );
 
-return(
-  <>
-    <Layout>
+  return (
+    <>
+      <Layout>
         <Works />
-        <ComicFetcher setComicData={setComicData}/>
+        <ComicFetcher setComicData={setComicData} />
         {comicData && <ComicDisplay comicData={comicData} />}
-    </Layout>
-    
-  </>
-)};
+      </Layout>
+    </>
+  );
+};
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   // Replace with your logic to fetch initial comic data if needed

@@ -1,9 +1,9 @@
 // src/components/Works.tsx
 
-import React from "react";
-import styles from "../styles/Works.module.css";
-import Image from "next/image";
-import { isAbsolute } from "path";
+import React from 'react';
+import styles from '../styles/Works.module.css';
+import Image from 'next/image';
+import { isAbsolute } from 'path';
 
 const Works: React.FC = () => {
   return (
@@ -14,8 +14,12 @@ const Works: React.FC = () => {
         <li>
           <figure className={styles.works__pictures}>
             <figcaption className={styles.caption}>study projects</figcaption>
-            <Image src="/img/фрейм 1.png" alt="study projects" height={300}
-              width={300}/>
+            <Image
+              src="/img/фрейм 1.png"
+              alt="study projects"
+              height={300}
+              width={300}
+            />
           </figure>
         </li>
         <li>
@@ -23,8 +27,12 @@ const Works: React.FC = () => {
             <figcaption className={styles.caption}>
               2D game on python
             </figcaption>
-            <Image src="/img/2dgame.png" alt="2D game on python" height={300}
-              width={300} />
+            <Image
+              src="/img/2dgame.png"
+              alt="2D game on python"
+              height={300}
+              width={300}
+            />
           </figure>
         </li>
         <li>

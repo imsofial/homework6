@@ -1,7 +1,7 @@
 // components/BackgroundImage.tsx
-import React from "react";
-import styles from "../styles/BackgroundImage.module.css";
-import Image from "next/image";
+import React from 'react';
+import styles from '../styles/BackgroundImage.module.css';
+import Image from 'next/image';
 
 type ImageLoaderParams = {
   src: string;
@@ -16,7 +16,13 @@ const imageLoader = ({ src, width, quality }: ImageLoaderParams): string => {
 const BackgroundImage: React.FC = () => {
   return (
     <div className={styles.bgImg}>
-      <Image loader={imageLoader} src="/img/me.png" alt="Background" width={650} height={730}/>
+      <Image
+        loader={imageLoader}
+        src="/img/me.png"
+        alt="Background"
+        width={650}
+        height={730}
+      />
     </div>
   );
 };

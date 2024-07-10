@@ -1,31 +1,31 @@
-import React, { useState } from "react";
-import { ComicData } from "./types";
+import React, { useState } from 'react';
+import { ComicData } from './types';
 
 interface ComicFetcherProps {
   setComicData: React.Dispatch<React.SetStateAction<ComicData | null>>;
 }
 
-const ComicFetcher: React.FC<ComicFetcherProps> =  ({ setComicData }) => {
+const ComicFetcher: React.FC<ComicFetcherProps> = ({ setComicData }) => {
   // const [comicData, setComicData] = useState<ComicData | null>(null);
   const [loading, setLoading] = useState(false);
 
   const fetchIdentifier = async (email: string): Promise<string> => {
     const params = new URLSearchParams({ email });
     const response = await fetch(
-      `https://fwd.innopolis.university/api/hw2?${params}`,
+      `https://fwd.innopolis.university/api/hw2?${params}`
     );
     if (!response.ok) {
-      throw new Error("Failed to fetch identifier");
+      throw new Error('Failed to fetch identifier');
     }
     return response.json();
   };
 
   const fetchComic = async (comic_id: string): Promise<ComicData> => {
     const response = await fetch(
-      `https://fwd.innopolis.university/api/comic?id=${comic_id}`,
+      `https://fwd.innopolis.university/api/comic?id=${comic_id}`
     );
     if (!response.ok) {
-      throw new Error("Failed to fetch comic");
+      throw new Error('Failed to fetch comic');
     }
     return response.json();
   };
@@ -41,7 +41,7 @@ const ComicFetcher: React.FC<ComicFetcherProps> =  ({ setComicData }) => {
       const comicData = await fetchComic(id);
       setComicData(comicData);
     } catch (error) {
-      throw new Error("Failed to identify ID")
+      throw new Error('Failed to identify ID');
     } finally {
       setLoading(false);
     }
