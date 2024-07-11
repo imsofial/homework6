@@ -7,6 +7,7 @@ import ComicDisplay from '../components/ComicDisplay';
 import Works from '../components/Works';
 import ComicFetcher from '../components/ComicFetcher';
 import Layout from '../components/Layout';
+import Head from 'next/head';
 
 interface Props {
   initialComicData: ComicData | null;
@@ -19,6 +20,9 @@ const WorksPage: React.FC<Props> = ({ initialComicData }) => {
 
   return (
     <>
+      <Head>
+        <title>About</title>
+      </Head>
       <Layout>
         <Works />
         <ComicFetcher setComicData={setComicData} />

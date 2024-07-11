@@ -6,7 +6,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="img/favicon.ico" />
           <meta name="author" content="Sofia" />
           <meta name="description" content="Portfolio of Sofia Goryunova" />
         </Head>
